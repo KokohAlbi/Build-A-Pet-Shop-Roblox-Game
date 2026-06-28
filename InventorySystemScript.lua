@@ -12,7 +12,7 @@ local warnaMati  = Color3.fromRGB(150, 110, 95)
 local teksAktif  = Color3.fromRGB(80, 50, 30)      
 local teksMati   = Color3.fromRGB(240, 240, 240)    
 
-local tweenInfo = TweenInfo.new(0.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+local tweenInfo = TweenInfo.new(0.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out) --Animation script
 
 local function animasiKlik(tombol)
 	local ukuranAsli = tombol.Size
