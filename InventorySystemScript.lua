@@ -6,6 +6,7 @@ local TweenService = game:GetService("TweenService")
 
 inventoryMenu.Visible = false
 
+--Script ubah warna saat active
 local warnaAktif = Color3.fromRGB(255, 240, 210)  
 local warnaMati  = Color3.fromRGB(150, 110, 95)   
 
