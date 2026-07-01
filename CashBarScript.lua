@@ -1,3 +1,4 @@
+--Server script for player's cash
 local player = game.Players.LocalPlayer
 local leaderstats = player:WaitForChild("leaderstats")
 local cash = leaderstats:WaitForChild("Cash")
