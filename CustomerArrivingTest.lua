@@ -1,3 +1,4 @@
+--tes customer arriving 10sec after spawn
 local npc = script.Parent
 local humanoid = npc:WaitForChild("Humanoid")
 local target = game.Workspace:WaitForChild("NPC kasir")
