@@ -1,3 +1,4 @@
+--Inventory system with 3 categories
 local mainUI = script.Parent
 local inventoryButton = mainUI:WaitForChild("InventoryButton")
 local inventoryMenu = mainUI:WaitForChild("InventoryMenu")
