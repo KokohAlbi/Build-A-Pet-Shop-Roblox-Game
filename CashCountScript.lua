@@ -1,5 +1,5 @@
 --Server script for player's cash
---not complete just for showing total cash player had
+--Showing how many cash player had in server
 game.Players.PlayerAdded:Connect(function(player)
 local leaderstats = Instance.new("Folder")
 leaderstats.Name = "leaderstats"
