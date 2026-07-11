@@ -1,4 +1,4 @@
---Inventory system with 3 categoriess
+--Inventory system with 3 categoriess with simple animation
 --Pets,Acceories,Furnitures
 local mainUI = script.Parent
 local inventoryButton = mainUI:WaitForChild("InventoryButton")
