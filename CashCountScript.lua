@@ -1,5 +1,6 @@
 --Server script for player's cash
 --Showing how many cash player had in server leaderboard
+--giving player 1000 cash starter
 game.Players.PlayerAdded:Connect(function(player)
 local leaderstats = Instance.new("Folder")
 leaderstats.Name = "leaderstats"
