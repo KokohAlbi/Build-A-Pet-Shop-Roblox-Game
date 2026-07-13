@@ -1,5 +1,3 @@
---Inventory system with 3 categoriess with simple animation
---Pets,Acceories,Furnitures
 local mainUI = script.Parent
 local inventoryButton = mainUI:WaitForChild("InventoryButton")
 local inventoryMenu = mainUI:WaitForChild("InventoryMenu")
@@ -12,10 +10,19 @@ local TWEEN_FAST = TweenInfo.new(0.08, Enum.EasingStyle.Quad, Enum.EasingDirecti
 local TWEEN_NORMAL = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
 local TWEEN_POP = TweenInfo.new(0.3, Enum.EasingStyle.Back, Enum.EasingDirection.Out)
 
+-- Tema Warna Tab UI
 local warnaAktif = Color3.fromRGB(255, 240, 210)  -- Vanilla Terang
 local warnaMati  = Color3.fromRGB(150, 110, 95)   -- Cokelat Redup
-local teksAktif  = Color3.fromRGB(80, 50, 30)      -- Cokelat Gelap
+local teksAktif  = Color3.fromRGB(80, 50, 30)       -- Cokelat Gelap
 local teksMati   = Color3.fromRGB(240, 240, 240)    -- Putih Abu-abu
+
+-- Colour buat Rarity
+local WarnaRarity = {
+	["Common"] = Color3.fromRGB(255, 255, 255),      -- Putih Bersih
+	["Uncommon"] = Color3.fromRGB(85, 255, 127),    -- Hijau Muda
+	["Rare"] = Color3.fromRGB(0, 170, 255),        -- Biru Cerah
+	["Legendary"] = Color3.fromRGB(255, 215, 0)     -- Emas / Kuning Berkilau
+}
 
 local function animasiKlikTombol(tombol, ukuranNormal)
 	tombol.Size = ukuranNormal
@@ -113,19 +120,28 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local DapatkanItemEvent = ReplicatedStorage:WaitForChild("DapatkanItemEvent")
 local contentScroll = inventoryMenu:WaitForChild("ContentScroll")
 
-DapatkanItemEvent.OnClientEvent:Connect(function(namaItem, kategori)
+DapatkanItemEvent.OnClientEvent:Connect(function(namaItem, kategori, rarity)
 	local targetGrid = contentScroll:FindFirstChild(kategori .. "Grid")
 
 	if targetGrid then
 		local template = targetGrid:FindFirstChild("SlotTemplate")
 		if template then
+			-- Proses kloning slot item
 			local slotBaru = template:Clone()
 			slotBaru.Name = namaItem
 			slotBaru.Visible = true 
 			slotBaru.Parent = targetGrid
+
 			local textLabel = slotBaru:FindFirstChildOfClass("TextLabel")
 			if textLabel then
 				textLabel.Text = namaItem
+
+				-- Ganti warna tulisan teks secara instan sesuai data Rarity dari Server
+				if rarity and WarnaRarity[rarity] then
+					textLabel.TextColor3 = WarnaRarity[rarity]
+				else
+					textLabel.TextColor3 = Color3.fromRGB(255, 255, 255) -- Warna default jika rarity tidak terdeteksi
+				end
 			end
 		end
 	end
