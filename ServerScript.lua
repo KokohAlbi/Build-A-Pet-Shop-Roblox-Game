@@ -4,16 +4,15 @@
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local DapatkanItemEvent = ReplicatedStorage:WaitForChild("DapatkanItemEvent")
 
+-- Giving Rarity to pets
 local listPetContoh = {
-	{Nama = "Doggy", Kategori = "Pets"},
-	{Nama = "Cat", Kategori = "Pets"},
-	{Nama = "Dragon", Kategori = "Pets"},
-	{Nama = "Choco Chair", Kategori = "Furniture"}
+	{Nama = "Doggy", Kategori = "Pets", Rarity = "Common"},
+	{Nama = "Cat", Kategori = "Pets", Rarity = "Uncommon"},
+	{Nama = "Dragon", Kategori = "Pets", Rarity = "Legendary"},
+	{Nama = "Choco Chair", Kategori = "Furniture", Rarity = "Common"}
 }
 
 game.Players.PlayerAdded:Connect(function(player)
-
---Cash Count Player Script 1000 cash test
 	local leaderstats = Instance.new("Folder")
 	leaderstats.Name = "leaderstats"
 	leaderstats.Parent = player
@@ -25,10 +24,8 @@ game.Players.PlayerAdded:Connect(function(player)
 
 	task.wait(3)
 
-	print("Mengirim data item contoh ke inventory: " .. player.Name)
-
 	for _, dataItem in pairs(listPetContoh) do
-		DapatkanItemEvent:FireClient(player, dataItem.Nama, dataItem.Kategori)
-		task.wait(0.1) 
+		DapatkanItemEvent:FireClient(player, dataItem.Nama, dataItem.Kategori, dataItem.Rarity)
+		task.wait(0.1)
 	end
 end)
