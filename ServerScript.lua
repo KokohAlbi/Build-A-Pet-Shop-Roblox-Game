@@ -1,4 +1,5 @@
 -- SCRIPT SERVER GABUNGAN: CASH + DATA INVENTORY UTUK PLAYER BARU
+--Test Item Script
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local DapatkanItemEvent = ReplicatedStorage:WaitForChild("DapatkanItemEvent")
 
