@@ -10,7 +10,8 @@ local listPetContoh = {
 }
 
 game.Players.PlayerAdded:Connect(function(player)
-    
+
+--Cash Count Player Script 1000 cash test
 	local leaderstats = Instance.new("Folder")
 	leaderstats.Name = "leaderstats"
 	leaderstats.Parent = player
