@@ -16,7 +16,7 @@ local warnaMati  = Color3.fromRGB(150, 110, 95)   -- Cokelat Redup
 local teksAktif  = Color3.fromRGB(80, 50, 30)       -- Cokelat Gelap
 local teksMati   = Color3.fromRGB(240, 240, 240)    -- Putih Abu-abu
 
--- Colour buat Rarity
+-- Color buat tiap Rarity
 local WarnaRarity = {
 	["Common"] = Color3.fromRGB(255, 255, 255),      -- Putih Bersih
 	["Uncommon"] = Color3.fromRGB(85, 255, 127),    -- Hijau Muda
