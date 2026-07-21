@@ -1,6 +1,6 @@
 -- SCRIPT SERVER GABUNGAN: CASH + DATA INVENTORY UTUK PLAYER BARU
---Test Item Script (Dog,Cat,Dragon) Test Pet
---(Choco Chair) Test Furniture 
+--Test Item Script (Dog,Cat,Dragon) Test Pet Items
+--(Choco Chair) Test Furniture Items
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local DapatkanItemEvent = ReplicatedStorage:WaitForChild("DapatkanItemEvent")
 
