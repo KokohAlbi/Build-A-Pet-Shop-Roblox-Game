@@ -10,7 +10,8 @@ local TWEEN_FAST = TweenInfo.new(0.08, Enum.EasingStyle.Quad, Enum.EasingDirecti
 local TWEEN_NORMAL = TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
 local TWEEN_POP = TweenInfo.new(0.3, Enum.EasingStyle.Back, Enum.EasingDirection.Out)
 
--- Tema Warna Tab UI
+--Colour Theame
+
 local warnaAktif = Color3.fromRGB(255, 240, 210)  -- Light Vanilla
 local warnaMati  = Color3.fromRGB(150, 110, 95)   -- Cokelat Redup
 local teksAktif  = Color3.fromRGB(80, 50, 30)       -- Cokelat Gelap
