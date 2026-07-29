@@ -1,4 +1,4 @@
---Script for showing cash bar icon for player's cash
+--Script showing cash bar (icon) for player's total cash
 local player = game.Players.LocalPlayer
 local leaderstats = player:WaitForChild("leaderstats")
 local cash = leaderstats:WaitForChild("Cash")
