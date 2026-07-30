@@ -1,10 +1,10 @@
 -- SCRIPT SERVER GABUNGAN: CASH + DATA INVENTORY UTUK PLAYER BARU
---Test Item Script (Dog,Cat,Dragon) Test Pet Items
---(Choco Chair) Test Furniture Items
+--Test Item Script (Dog,Cat,Dragon) Test Pet Item
+--(Choco Chair) Test Furniture Item
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local DapatkanItemEvent = ReplicatedStorage:WaitForChild("DapatkanItemEvent")
 
--- Giving Rarity to pets
+-- Rarity for Pets
 local listPetContoh = {
 	{Nama = "Doggy", Kategori = "Pets", Rarity = "Common"},
 	{Nama = "Cat", Kategori = "Pets", Rarity = "Uncommon"},
